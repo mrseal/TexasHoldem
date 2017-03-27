@@ -1,0 +1,20 @@
+# Eclipse Workspace Files
+.metadata
+RemoteSystemsTempFiles
+
+# Eclipse Project Files
+.settings
+.project
+.classpath
+
+# Maven Build Files
+target
+reports
+
+# Java Compiled Sources
+*.class
+*/bin/*
+bin/*
+*.jar
+*.war
+*.ear
