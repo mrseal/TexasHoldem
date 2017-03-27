@@ -114,7 +114,7 @@ public class Hands implements Comparable<Hands> {
             ranking = Ranking.ONE_PAIR;
             break;
         }
-        case 5: {
+        default: {
             ranking = Ranking.HIGH_HAND;
             break;
         }
