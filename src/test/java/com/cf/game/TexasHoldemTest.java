@@ -26,6 +26,11 @@ public class TexasHoldemTest {
         assertTrue(TexasHoldem.compare("D2, B2, C10, A10, B12", "D5, A6, C7, C8, B9") < 0);
     }
 
+    @Test
+    public void testCompareSameRanking() {
+        assertTrue(TexasHoldem.compare("D2, B2, C10, A10, B12", "D12, A6, C10, C8, B9") > 0);
+    }
+
     @Test(expected = IllegalArgumentException.class)
     public void testInvalidPokerNumber() {
         TexasHoldem.compare("B11", "A8, A4");
@@ -33,7 +38,7 @@ public class TexasHoldemTest {
 
     @Test(expected = IllegalArgumentException.class)
     public void testInvalidPoker() {
-        TexasHoldem.compare("M11", "A8, A4");
+        TexasHoldem.compare("M11, B2, A10, A14, D1", "D12, A6, C10, C8, B9");
     }
 
 }
