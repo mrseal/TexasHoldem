@@ -1,5 +1,6 @@
 package com.cf.game;
 
+import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 
 import org.junit.Test;
@@ -29,6 +30,11 @@ public class TexasHoldemTest {
     @Test
     public void testCompareSameRanking() {
         assertTrue(TexasHoldem.compare("D2, B2, C10, A10, B12", "D12, A6, C10, C8, B9") > 0);
+    }
+
+    @Test
+    public void testCompareSame() {
+        assertEquals(0, TexasHoldem.compare("D2, B2, C10, A10, B12", "D2, C10, B10, C2, B12"));
     }
 
     @Test(expected = IllegalArgumentException.class)
