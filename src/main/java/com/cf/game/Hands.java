@@ -83,8 +83,8 @@ public class Hands implements Comparable<Hands> {
             counts[poker.getNum()]++;
         }
 
-        int handsPattern = 0;
-        final int[][] handsValue = new int[4][POKER_NUM];
+        int handsPattern = 0; // 用来判断牌型
+        final int[][] handsValue = new int[4][POKER_NUM]; // 二维矩阵用来计算牌值，用于同牌型下的比较
         int position = 0;
         for (int i = counts.length - 1; i >= 0; i--) {
             if (counts[i] != 0) {

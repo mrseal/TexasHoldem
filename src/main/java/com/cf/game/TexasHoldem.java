@@ -12,7 +12,10 @@ public abstract class TexasHoldem {
      * @return 负数：如果handsA小于handsB; 正数：如果handsA大于handsB; 零：相等
      */
     public static int compare(final String handsA, final String handsB) {
-        return getHands(handsA).compareTo(getHands(handsB));
+        final long start = System.currentTimeMillis();
+        final int result = getHands(handsA).compareTo(getHands(handsB));
+        System.out.println(System.currentTimeMillis() - start + "ms");
+        return result;
     }
 
     private static Hands getHands(final String handsStr) {
